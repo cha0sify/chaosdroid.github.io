@@ -1,12 +1,6 @@
 <footer class="footer">
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <p class="text-center">
-                    Copyright &copy; {{ site.time | date: '%Y' }} {% if site.author.name %}<a href='#author'>{{ site.author.name }}</a>{% else %}<a href='#about'>{{ site.title }}</a>{% endif %}. All rights reserved. Based on <a href='https://github.com/vinyanalista/material-jekyll'>Material site template for Jekyll</a>.
-                </p>
-            </div>
-        </div>
+        Copyright &copy; {{ site.time | date: '%Y' }} {% if site.author.name %}<a href='#author'>{{ site.author.name }}</a>{% else %}<a href='#about'>{{ site.title }}</a>{% endif %}. All rights reserved. Based on <a href='https://github.com/vinyanalista/material-jekyll'>Material site template for Jekyll</a>.
     </div>
 </footer>
 
@@ -23,36 +17,20 @@
         <meta itemprop="url" content="{{ image | prepend: site.baseurl | replace: '//', '/' | prepend: site.url }}"/>
         <!--<meta itemprop="width" content=""/>--><!-- TODO Image width -->
         <!--<meta itemprop="height" content=""/>--><!-- TODO Image height -->
-    </div> 
+    </div>
 {% endif %}
 
 {% if site.lang %}
     <meta itemprop="inLanguage" content="{{ site.lang }}"/>
 {% endif %}
 
-{% if site.disqus_shortname %}
+{% if site.disqus_shortname and jekyll.environment == "production" %}
     <!-- Disqus -->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES * * */
-        {% if site.lang %}
-            var disqus_config = function () {
-                this.language = "{{ site.lang }}";
-            };
-        {% endif %}
-        var disqus_shortname = '{{ site.disqus_shortname }}';
-        
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script'); s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
+    <script id="dsq-count-scr" src="//{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
     <!-- Disqus End -->
 {% endif %}
 
-{% if site.google.adsense.publisher_id %}
+{% if site.google.adsense.publisher_id and jekyll.environment == "production" %}
     <!-- Google AdSense -->
     {% if site.google.adsense.content_ad_unit_2 %}
         {% include adsense.html id="content_ad_unit_2" ad_slot=site.google.adsense.content_ad_unit_2 %}
@@ -63,7 +41,7 @@
 
         $(document).ready(function(){
             {% if site.google.adsense.content_ad_unit_2 %}
-                var $ad = $('#content_ad_unit_2').closest('.row');
+                var $ad = $('#content_ad_unit_2');
                 var $posts = $('.blog-post');
                 if ($posts.length > 1) {
                     // Post listing
