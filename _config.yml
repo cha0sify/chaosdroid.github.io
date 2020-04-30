@@ -22,15 +22,15 @@
 author:
     # Site's author name
     # Default: not set (author name is not displayed)
-    name: Your awesome name
+    name: Christian Z.
 
     # Site's author email
     # Default: not set (author email is not displayed)
-    email: your-email@yourdomain.com
+    email: chaosware19@gmail.com
 
     # Site's author website, profile
     # Default: not set (author site is not displayed)
-    site: http://yourdomain.com
+    site: https://chaosdroid.github.io/
 
 ############
 # Building #
@@ -221,13 +221,11 @@ plugins:
 #################
 
 # Site title
-title: Your awesome title
+title: chaosdroid dev page
 
 # Site description
 description: > # this means to ignore newlines until the text ends
-    Write an awesome description for your new site here. You can edit this
-    line in _config.yml. It will appear in your document head meta (for
-    Google search results) and in your feed.xml site description.
+   hier ensteht eine website! :)
 
 # Default site image
 # Image used as a default thumbnail for pages and posts which do not have an
@@ -239,7 +237,7 @@ image: "/assets/favicons/android-chrome-192x192.png"
 # A language tag following the language tag syntax (IETF's BCP 47). This is
 # meant to assist search engines and browsers.
 # Default: not set (do not associate any language with this site's content)
-lang: en
+lang: de
 
 # For more info on language tags, please refer to
 # http://www.w3.org/International/articles/language-tags/
@@ -264,7 +262,7 @@ lang: en
 # website with social networks. An AddThis profile contains configuration
 # options and analytics data for a website.
 # Default: not set (AddThis is not used to handle social networks integration)
-# addthis_profile_id: "ra-example123456789"
+ addthis_profile_id: "ra-5eab45e3113ca905"
 
 # If you do not know your AddThis profile ID, you can find it at
 # https://www.addthis.com/settings/publisher
@@ -321,7 +319,7 @@ facebook:
 # GitHub username
 # Example: jekyll, if your GitHub URL is https://github.com/jekyll
 # Default: not set (GitHub URL is not displayed)
-github_username: "jekyll"
+github_username: "chaosdroid"
 
 # Google Plus user ID
 # Example: 123456789098765432123, if your Google Plus URL is
@@ -332,7 +330,7 @@ github_username: "jekyll"
 # Instagram username
 # Example: username, if your Instagram URL is https://instagram.com/username
 # Default: not set (Instagram URL is not displayed)
-# instagram_username: "username"
+ instagram_username: "hh_chris_"
 
 # LinkedIn username
 # Example: username, if your LinkedIn public profile URL is
